@@ -141,11 +141,7 @@ namespace WinFormsChattingClientAndServer.UserControls
             {
                 CreateInfoControl("오류로 인해 메시지가 전달되지 않았습니다.");
             }
-        }
-
-        public void TbWriteClear()
-        {
             TBWrite.Clear();
-        }
+        }       
     }
 }

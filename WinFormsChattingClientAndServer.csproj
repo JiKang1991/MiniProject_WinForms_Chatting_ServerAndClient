@@ -50,6 +50,7 @@
     <Compile Include="Class\CCReceiptProcess.cs" />
     <Compile Include="Class\CServerManager.cs" />
     <Compile Include="Class\CServerProcess.cs" />
+    <Compile Include="Class\CSSessionProcess.cs" />
     <Compile Include="Class\CSReceiptProcess.cs" />
     <Compile Include="Enum\MessageType.cs" />
     <Compile Include="FormMain.cs">

@@ -19,6 +19,7 @@ namespace WinFormsChattingClientAndServer.Class
         string port = null;
         Socket serverSocket = null;
         public List<CSReceiptProcess> list = new List<CSReceiptProcess>();
+        public List<Thread> threadList = new List<Thread>();
         UCChattingPage uCChattingPage = null;
 
         public CServerManager(string[] totalIp, string port, Control callControl)
@@ -61,6 +62,11 @@ namespace WinFormsChattingClientAndServer.Class
             Thread serverThread = new Thread(new ThreadStart(cServerProcess.Run));
             serverThread.IsBackground = true;
             serverThread.Start();
+
+            CSSessionProcess cSSessionProcess = new CSSessionProcess(this);
+            Thread sessionThread = new Thread(new ThreadStart(cSSessionProcess.Run));
+            sessionThread.IsBackground = true;
+            sessionThread.Start();
         }
 
         public void Broadcast(MessageType type, string userInfo, string message)
@@ -69,7 +75,7 @@ namespace WinFormsChattingClientAndServer.Class
 
             for (int i = 0; i < list.Count; i++)
             {
-                list[i].socket.Send(Encoding.Default.GetBytes(str));
+                list[i].socket.Send(Encoding.Default.GetBytes(str));                
             }
         }
 
@@ -91,8 +97,8 @@ namespace WinFormsChattingClientAndServer.Class
 
         public void SendMessage(String message)
         {
-            CallCreateMyMessageControl(message);
-            Broadcast(MessageType.Talk, "**Server**", message);
+            CallCreateInfoControl(message);
+            Broadcast(MessageType.Infomation, "**Server**", message);
         }
     }
 }

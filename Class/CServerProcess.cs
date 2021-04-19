@@ -57,6 +57,7 @@ namespace WinFormsChattingClientAndServer.Class
                         cSReceivedProcess = new CSReceiptProcess(socket, csm);
                         csm.list.Add(cSReceivedProcess);
                         Thread receivedThread = new Thread(cSReceivedProcess.Run);
+                        csm.threadList.Add(receivedThread);
                         receivedThread.IsBackground = true;
                         receivedThread.Start();
                     }

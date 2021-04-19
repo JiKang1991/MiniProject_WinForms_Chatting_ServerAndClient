@@ -12,9 +12,9 @@ namespace WinFormsChattingClientAndServer.Class
 {
     class CSReceiptProcess
     {
-        CServerManager csm = null;
         public Socket socket = null;
-
+        CServerManager csm = null;
+        
         public CSReceiptProcess(Socket socket, CServerManager csm)
         {
             this.socket = socket;
@@ -28,7 +28,7 @@ namespace WinFormsChattingClientAndServer.Class
         }
 
         public void Run()
-        {
+        {            
             try
             {
                 string userInfo = CheckUserInfo();
