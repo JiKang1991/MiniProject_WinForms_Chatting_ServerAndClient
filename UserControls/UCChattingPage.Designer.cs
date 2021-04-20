@@ -30,15 +30,15 @@ namespace WinFormsChattingClientAndServer.UserControls
         private void InitializeComponent()
         {
             this.PanelWrite = new System.Windows.Forms.Panel();
-            this.TBWrite = new System.Windows.Forms.TextBox();
             this.BtnSend = new System.Windows.Forms.Button();
+            this.TBWrite = new System.Windows.Forms.TextBox();
             this.PanelChattingPage = new System.Windows.Forms.Panel();
             this.PanelWrite.SuspendLayout();
             this.SuspendLayout();
             // 
             // PanelWrite
             // 
-            this.PanelWrite.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            this.PanelWrite.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.PanelWrite.Controls.Add(this.BtnSend);
             this.PanelWrite.Controls.Add(this.TBWrite);
@@ -46,16 +46,6 @@ namespace WinFormsChattingClientAndServer.UserControls
             this.PanelWrite.Name = "PanelWrite";
             this.PanelWrite.Size = new System.Drawing.Size(300, 124);
             this.PanelWrite.TabIndex = 1;
-            // 
-            // TBWrite
-            // 
-            this.TBWrite.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.TBWrite.Location = new System.Drawing.Point(3, 0);
-            this.TBWrite.Multiline = true;
-            this.TBWrite.Name = "TBWrite";
-            this.TBWrite.Size = new System.Drawing.Size(232, 121);
-            this.TBWrite.TabIndex = 0;
             // 
             // BtnSend
             // 
@@ -68,11 +58,22 @@ namespace WinFormsChattingClientAndServer.UserControls
             this.BtnSend.UseVisualStyleBackColor = true;
             this.BtnSend.Click += new System.EventHandler(this.BtnSend_Click);
             // 
+            // TBWrite
+            // 
+            this.TBWrite.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.TBWrite.Location = new System.Drawing.Point(3, 0);
+            this.TBWrite.Multiline = true;
+            this.TBWrite.Name = "TBWrite";
+            this.TBWrite.Size = new System.Drawing.Size(232, 121);
+            this.TBWrite.TabIndex = 0;
+            // 
             // PanelChattingPage
             // 
-            this.PanelChattingPage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.PanelChattingPage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.PanelChattingPage.AutoScroll = true;
             this.PanelChattingPage.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.PanelChattingPage.Location = new System.Drawing.Point(4, 4);
             this.PanelChattingPage.Name = "PanelChattingPage";

@@ -34,8 +34,7 @@ namespace WinFormsChattingClientAndServer.UserControls
                 Invoke(new PrintMessageCB(PrintMessage), control);
             }
             else
-            {
-                //control.Parent = PanelChattingPage;
+            {                
                 PanelChattingPage.Controls.Add(control);
             }
         }
